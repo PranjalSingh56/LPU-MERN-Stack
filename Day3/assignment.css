@@ -1,0 +1,77 @@
+.header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid white;
+    border-radius: 25px;
+}
+
+.products-section {
+    background-color: orange;
+    margin: 40px auto;
+    padding: 15px 20px;
+    font-size: 30px;
+    font-style: bold;
+    border-radius: 15px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Cards {
+    display: flex;
+    flex-direction: row; /* Ensures horizontal layout */
+    flex-wrap: wrap; /* Allows wrapping if necessary */
+    justify-content: space-between; /* Adds spacing between cards */
+    gap: 20px; /* Adds consistent spacing between cards */
+}
+
+.product-card {
+    border: 2px solid black;
+    width: 260px;
+    padding: 20px;
+    position: relative;
+    border-radius: 15px;
+    background-color: #f3e2bd;  
+    box-shadow: black 4px 4px 8px;
+    /* Removed margin for better alignment */
+}
+
+.sale-badge {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background-color: red;
+    color: white;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.relative-box {
+    border: 3px solid blue;
+    width: 220px;
+    height: 120px;
+    margin: 40px auto;
+    /* margin: 40px 0 40px 80px; */
+    text-align: center;
+    line-height: 120px;
+    font-weight: bold;
+    background-color: #bde3f3;
+}
+
+.chat{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: green;
+    color: white;
+    font-size: large;
+    border-radius: 30px;
+    font-size: 16px;
+    padding: 15px 25px;
+    cursor: pointer;
+
+}
+

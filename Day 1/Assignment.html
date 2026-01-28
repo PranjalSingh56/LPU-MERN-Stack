@@ -1,0 +1,190 @@
+<!-- ASSIGNMENT QUESTION
+Create a Student Information Website using HTML only.
+
+🔹 Page Requirements
+
+1️⃣ Page Structure (Mandatory)
+Use semantic tags:
+<header>
+<nav>
+<section>
+<footer>
+
+2️⃣ Navigation with Auto Scroll
+Create a navbar with links:
+
+Home
+Courses
+Student Table
+Registration Form
+FAQ
+👉 Use id for auto scroll
+
+
+3️⃣ Home Section
+One heading (<h1>)
+One paragraph (<p>)
+Use inline tag (<span> or <strong>)
+
+4️⃣ Courses Section
+Use unordered list for available courses
+Use ordered list for learning steps
+
+5️⃣ Student Table
+Create a table with:
+
+Name
+Course
+Marks
+Use <th>
+Use colspan
+Add <caption>
+
+6️⃣ Registration Form
+Form should include:
+
+Name (text)
+Email (email)
+Password (password)
+Gender (radio)
+Skills (checkbox)
+Course (select)
+Submit button
+✔ Use <label>
+ ✔ Use required
+
+
+7️⃣ FAQ Section (Accordion)
+Create 3 questions using:
+
+<details>
+<summary>
+
+8️⃣ Footer
+Simple text like © 2026 Student Portal -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Information Website</title>
+</head>
+<body>
+
+<header>
+  <h1>Student Information Portal</h1>
+  <p>Welcome to the Student Information Portal</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#courses">Courses</a>
+  <a href="#student-table">Student Table</a>
+  <a href="#registration-form">Registration Form</a>
+  <a href="#faq">FAQ</a>
+</nav>
+
+<section id="home">
+  <h2>Home Section</h2>
+  <p>
+    This is the <strong>home</strong> section of the Student Information Portal.
+  </p>
+</section>
+
+<section id="courses">
+  <h2>Courses</h2>
+
+  <ul>
+    <li>Introduction to HTML</li>
+    <li>CSS Basics</li>
+    <li>JavaScript Fundamentals</li>
+    <li>Web Development Projects</li>
+  </ul>
+
+  <ol>
+    <li>Choose a course</li>
+    <li>Enroll</li>
+    <li>Attend classes</li>
+    <li>Complete assignments</li>
+  </ol>
+</section>
+
+<section id="student-table">
+  <h2>Student Table</h2>
+
+  <table border="1">
+    <caption>Student Information Table</caption>
+    <tr>
+      <th colspan="2">Name</th>
+      <th>Course</th>
+      <th>Marks</th>
+    </tr>
+    <tr>
+      <td colspan="2">Aditya</td>
+      <td>HTML</td>
+      <td>85</td>
+    </tr>
+  </table>
+</section>
+
+<section id="registration-form">
+  <h2>Registration Form</h2>
+
+  <form>
+    <label for="full-name">Full Name:</label>
+    <input type="text" id="full-name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br><br>
+
+    <label>Password:</label>
+    <input type="password" required><br><br>
+
+    <label>Gender:</label>
+    <input type="radio" name="gender"> Male
+    <input type="radio" name="gender"> Female<br><br>
+
+    <label>Skills:</label>
+    <input type="checkbox"> HTML
+    <input type="checkbox"> CSS
+    <input type="checkbox"> JavaScript<br><br>
+
+    <label>Course:</label>
+    <select required>
+      <option value="">Select</option>
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="js">JavaScript</option>
+    </select><br><br>
+
+    <input type="submit">
+  </form>
+</section>
+
+<section id="faq">
+  <h2>FAQ</h2>
+
+  <details>
+    <summary>What courses are available?</summary>
+    <p>HTML, CSS, JavaScript.</p>
+  </details>
+
+  <details>
+    <summary>How do I register?</summary>
+    <p>Using the registration form.</p>
+  </details>
+  
+  <details>
+    <summary>Who can I contact for support?</summary>
+    <p>Contact the support team via email.</p>
+  </details>
+</section>
+
+<footer>
+  <p>Student Information Portal</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+.container {
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    align-items: baseline;
+    gap: 10px;
+    background-color: lightsteelblue;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin: 5px;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    font-weight: bold;
+    background-color: blueviolet;
+}
+
+.grid-container {
+    display: grid;
+    border: 2px solid black;
+    grid-template-columns: 1fr 50px 2fr 1fr;
+    gap: 10px;
+    background-color: lightgreen;
+}
+
+
+.grid-item {
+    background: steelblue;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+
+.box-two {
+    width: 300px;
+    height: 150px;
+    background-color: blue;
+    text-align: center;
+    line-height: 150px;
+    font-size: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(118, 118, 118);
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    top: 0;
+    position: sticky;
+}
+
+.menu a {
+    margin-left: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+.static {
+    position: relative;
+    top: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.relative {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    border: 2px solid black;
+    margin: 10px;
+    position: relative;
+    top: 20px;
+}
+
+.absolute {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border: 2px solid black;
+    margin: 10px;
+    position: absolute;
+    top: 20px;
+    z-index: 1;
+}
+
+.abs {
+    height: 400px;
+    width: 400px;
+    background-color: purple;
+    border: 2px solid black;
+    margin: 10px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    z-index: 1;
+}
+
+.fixed {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border: 2px solid black;
+    margin: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+
+.sticky {
+    top: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    border: 2px solid black;
+    margin: 10px;
+    position: sticky;
+    z-index: 1;
+}
+
+.parent {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.child {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border: 2px solid black;
+    margin: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}

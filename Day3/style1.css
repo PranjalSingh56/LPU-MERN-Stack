@@ -1,0 +1,71 @@
+:root {
+  --ball-size: 60px;
+  --bounce-height: 320px;
+  --duration: 3s;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-items: flex-start;
+  background:  #ffffff;
+}
+
+.scene {
+  position: relative;
+  width: 200px;
+  height: 400px;
+}
+
+/* BALL */
+.ball {
+  width: var(--ball-size);
+  height: var(--ball-size);
+  background: rgb(157, 224, 255);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce var(--duration) infinite ease-in-out;
+}
+
+
+/* BALL PHYSICS */
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, 0) scale(1,1);
+  }
+
+  60% {
+    transform: translate(-50%, var(--bounce-height))
+               scale(1.2, 0.8);
+  }
+
+  75% {
+    transform: translate(-50%, 260px)
+               scale(0.95, 1.05);
+  }
+
+  100% {
+    transform: translate(-50%, 0) scale(1,1);
+  }
+}
+
+/* SHADOW PHYSICS */
+@keyframes shadow {
+  0% {
+    transform: translateX(-50%) scale(0.5);
+    opacity: 0.2;
+  }
+
+  60% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(-50%) scale(0.5);
+    opacity: 0.2;
+  }
+}
