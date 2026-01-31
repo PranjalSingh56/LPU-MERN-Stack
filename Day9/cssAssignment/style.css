@@ -1,0 +1,124 @@
+/* div{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+} */
+
+.navBar{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    
+}
+li{
+    margin: 20px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+
+}
+.gradient{
+    margin-top: 20px;
+    width: 120px;
+    height: 120px;
+    border: 2px solid skyblue;
+    background: linear-gradient(to right , blue, skyblue,white);
+}
+
+button{
+    border: none;
+    padding: 10px;
+    background-color: red;
+    color:  white;
+     border-radius: 5px;
+}
+.gradient1{
+     width: 120px;
+    height: 120px;
+    border: 2px solid skyblue;
+    background: linear-gradient(to right , pink, skyblue,white);
+    margin-top: 10px;
+}
+.gradient1:hover{
+    background: linear-gradient(to right , red, green,white);
+}
+
+.bar{
+    border: 2px solid skyblue;
+    border-radius: 10px;
+    width: 200px;
+    margin-top: 20px;
+    background-color: whitesmoke;
+
+}
+.progress{
+    border: 2px solid skyblue;
+    background-color: aquamarine;
+    width: 50%;
+    border-radius: 10px;
+
+}
+.border{
+    border: 2px solid black;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.border:hover{
+    box-shadow: 10px 10px 10px cadetblue;
+    
+}
+.upper{
+    text-transform: uppercase;
+}
+.center{
+     width: 120px;
+    height: 120px;
+    border: 2px solid skyblue;
+    margin-top: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.profile {
+    position: relative;
+    width: 200px;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.crown {
+    font-size: 50px;
+    position: absolute;
+    top: -35px;
+    right: -10px;
+    transform: rotate(36deg);
+    z-index: 10;
+}
