@@ -1,0 +1,44 @@
+Event driven is a architecture is a design pattern where the flow of the applications is determined by the events such as user action, 
+.on(eventListener)= it register  an event
+
+
+emit.emit(event, data) = Triggers the event, event name is string based
+.off(eventListener) = Event is not triggered
+Ai Sensy  - WhatsApp marketing
+
+HTTP - Hyper text transfer protocol  - it is communication protocol (client-server to talk)
+HTTP stateless - it means server does not remember any previous request.
+previous request, user data , login state - because of this we use session, cookies and jwt token
+
+Http request structure - Every http request have four parts - header, url , body,  method 
+=>http methods
+get - Fetch data
+post -send data
+put - update full data
+patch - partial update
+delete - delete data
+
+Header - extra information
+e.g. content type - application/JSON
+	authorization - Brear "token"
+
+used for authorization- data format and data caching
+body content actual -Data only send by post put patch
+
+Server Response - Status code , header , body
+
+Node js follows event driven type architecture, We register a listener 
+http module is built in and it is used to create server
+
+createServer- a register a listener ,every incoming request
+response object - backend never send data as JSON( JavaScript object notation)
+frontend understand json easily
+
+res set header - 200 - success 
+res.writeHead(statusCode, SetHeader)
+
+it ends response, send data to client
+json.stringify - change convert object int json string
+listen server = server.listen(port, host , callbackfn)
+start server
+port = communication end point

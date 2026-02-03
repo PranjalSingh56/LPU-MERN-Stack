@@ -1,0 +1,23 @@
+Frontend Server(client side-user Interface- handles the UI interaction (HTML, CSS, JS) also tree Shaking(JS optimization technique) which 
+is  used to remove unused code before production  deployment e.g. user open - amazon.com)
+Frontend server send- html CSS an JS and browser pass it render the card button UI part.
+
+Backend - Handles logics , data and security and connect to database and send JSON response.
+
+client side(Html, css, js) => server(request response) => DB Query =>database 
+
+latency - delay- time taken to response , it is time taken for the request to travel from client to server , 
+ latency includes - network travel, TCP handshake, DNS lookup, time to reach server
+
+response time - time taken from request to full response, latency , server processing time
+
+One Line Answer
+latency  is the delay before reaches the sever 
+relationship  response time includes latency 
+
+JS originally for browser
+NodeJS allows the JS to run outside
+NodeJS is fast because it is non blocking (async-await) , blocking - synchronous
+synchronous - 1st come 1st work
+asynchronous - it work
+NodeJS allow JS to built backend server
