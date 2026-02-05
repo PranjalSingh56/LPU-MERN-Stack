@@ -1,0 +1,21 @@
+url based request handling 
+different url 
+request using url
+
+https method  =
+define action on server
+get - read / fetch the data
+post - create the data
+put - update the data
+delete = delete the data
+chunks -> node recieves request body in his small pecies
+proxy - it is a server side rendering
+we a bulding node js server that act as a proxy server(fake server or intermeditor)
+the browser will not call the api convert  data to html and send it to the browser
+browser->node Server(proxy)->dummy json api
+
+if you can't see api call 
+api is json browser needs html and server does the conversation 
+css is static browser request it seperately
+if api is not visible inside the network tag then it means api is protected
+frontend fetch api speed proxy hides api and give control
