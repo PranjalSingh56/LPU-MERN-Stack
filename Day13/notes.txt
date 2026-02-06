@@ -1,0 +1,161 @@
+| Situation              | Use |
+| ---------------------- | --- |
+| SEO matters            | SSR |
+| Fast first load        | SSR |
+| Heavy user interaction | CSR |
+| Dashboard apps         | CSR |
+| Simple content pages   | SSR |
+
+//CSR
+client side rendering means the browser downloads the minimal HTML file and then js Run in the browser to fetch data and build the UI
+Client-Side Rendering (CSR) is a rendering approach where the browser initially receives a minimal HTML file, 
+then JavaScript executes in the browser to fetch or compute data and dynamically build or update the UI.
+//how CSR work step by step
+1-Browser request page from server
+2-server sends empty /minimal html + js bundles
+3-browser downloads html
+4-js runs
+5-api call happens in browser
+6-ui is render dynamically
+
+//SSR
+it means generats full html(with data) and them send it to the browser
+Server-Side Rendering (SSR) is a rendering approach where the server initially generates HTML content, which is then sent to the browser.
+ The browser receives the complete HTML and can render it immediately.
+ //how SSR work step by step
+ browser request the page
+ server fetch the data
+ server generates the full html
+ browser ready to give view page
+
+ // what is hydration
+ process that js attached eventlistiener to server render html.
+
+ //Chalk, figlet
+
+//Status Code
+| Code | Name                  |
+| ---- | --------------------- |
+| 200  | OK                    |
+| 201  | Created               |
+| 301  | Moved Permanently     |
+| 400  | Bad Request           |
+| 401  | Unauthorized          |
+| 403  | Forbidden             |
+| 404  | Not Found             |
+| 500  | Internal Server Error |
+| 503  | Service Unavailable   |
+
+1xx → Informational
+2xx → Success
+3xx → Redirection
+4xx → Client Error
+5xx → Server Error
+
+| Code | Meaning                                       |
+| ---- | --------------------------------------------- |
+| 100  | Continue – request received, continue sending |
+
+| Code | Meaning    | When used                          |
+| ---- | ---------- | ---------------------------------- |
+| 200  | OK         | Request successful                 |
+| 201  | Created    | Resource created (POST)            |
+| 202  | Accepted   | Request accepted, processing later |
+| 204  | No Content | Success but no response body       |
+
+| Code | Meaning                    | When used               |
+| ---- | -------------------------- | ----------------------- |
+| 301  | Moved Permanently          | URL changed permanently |
+| 302  | Found / Temporary Redirect | Temporary redirection   |
+| 304  | Not Modified               | Cached response used    |
+
+| Code | Meaning            | Reason                          |
+| ---- | ------------------ | ------------------------------- |
+| 400  | Bad Request        | Invalid request data            |
+| 401  | Unauthorized       | User not authenticated          |
+| 403  | Forbidden          | Authenticated but no permission |
+| 404  | Not Found          | Resource not found              |
+| 405  | Method Not Allowed | Wrong HTTP method               |
+| 409  | Conflict           | Data conflict                   |
+| 429  | Too Many Requests  | Rate limiting                   |
+
+| Code | Meaning               | Reason                         |
+| ---- | --------------------- | ------------------------------ |
+| 500  | Internal Server Error | Server crashed / bug           |
+| 502  | Bad Gateway           | Invalid response from upstream |
+| 503  | Service Unavailable   | Server down / overload         |
+| 504  | Gateway Timeout       | Server didn’t respond          |
+
+//MVC
+Model --view --controller
+|
+request
+|
+services
+|
+dal
+|
+database
+
+Model represent the data structure and rule
+In real app mongoose schema , prisma schema database
+view handles ui rendering
+
+controller
+role of controller - handle request and response
+call services
+send status Code
+example
+ export const getsers = async((req,res)=>{
+    const users = await(userServices.getcallUSers);
+    res.status(200).json(users)
+ })
+
+ // what is service layer
+ contains business logic , validation rule , calculation work flow logic
+ 
+ //DAL(Data Access layer) - it handles database operation only
+ qurey, db connection logic,
+
+ export cost fetchusers = async(()=>{
+    return users
+ })
+ dal talks to database nothing else
+
+ //DTO(Data tranfer object)
+ Dto controlls what data is send/received
+
+ high senstive fields
+ saves response
+ export const userdto = (user)=>{
+    id:user.id
+    name:user.name   
+
+ }
+ Dto is the data filter
+
+ // utils
+ creates reusable helper function
+ data formmeter
+ token generator
+ hashing
+
+export const generatesId = ()=>{
+    Date.now()
+}
+
+//constant = fixed value use across app
+roles, status msg, error Code
+
+//conflict - requirement and app setting
+port, db.url, api.keys, 
+
+export const config = {PORT:process.env.port || 8080,
+DB_URL:process.envDB_URL,
+API_KEY:process.env.API_KEY
+}
+
+
+
+
+
