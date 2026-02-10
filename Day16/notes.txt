@@ -1,0 +1,79 @@
+cms-backend
+|-node_modules
+|-src 
+    config
+        db.js
+    controllers
+        auth.controller.js
+        artifact.controller.js
+    middlewares
+        auth.middleware.js
+    models
+        user.model.js
+        otp.model.js
+        artifact.model.js
+    routes
+        auth.routh.js
+        artifact.routes.js
+    app.js
+
+|-.env
+|-server.js
+|-.gitignore
+
+//express
+🔹What it is:
+A fast and minimal Node.js web framework.
+🔹Why it’s used:
+To create APIs and backend servers easily.
+
+//bcrypt
+🔹 What it is:
+A library to hash passwords securely.
+
+🔹 Why it’s used:
+To store passwords safely instead of plain text.
+
+//cors
+🔹 What it is:
+A security middleware for Express.
+
+🔹 Why it’s used:
+To allow frontend and backend to communicate when they are on different domains/ports.
+
+//dotenv
+🔹 What it is:
+Loads environment variables from a .env file.
+
+🔹 Why it’s used:
+To hide secrets like passwords, API keys, JWT secrets.
+
+//jsonwebtoken
+🔹 What it is:
+Used to create and verify authentication tokens.
+
+🔹 Why it’s used:
+To implement login authentication without sessions. 
+
+//morgan
+🔹 What it is:
+An HTTP request logger middleware.
+
+🔹 Why it’s used:
+To see incoming requests in the console (for debugging). 
+
+//nodemailer
+🔹 What it is:
+A Node.js module to send emails.
+
+🔹 Why it’s used:
+For OTPs, password reset links, verification emails. 
+
+//otp-generator
+🔹 What it is:
+A library to generate random OTPs.
+
+🔹 Why it’s used:
+For email or SMS verification.
+
+//to create jwt secrets = node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
