@@ -1,0 +1,62 @@
+//introduction mongodb and database
+database is the organize connection of data that can be store retrieve manage and update efficiently
+eg, banking system customer records, ecommerce - products, information, social media - likes, comments etc
+without database it store in file that hard to search, no relationship between data, and no security
+a dbms is a software is used to create, manage, provide query capability and handles security.
+popular DBMS 
+relational - my postsql, oracle, mysql
+non relation -mongodb, redis
+
+core responsibilities
+data processing, axis control, backup and recovery. update history, transaction management
+
+relational database characteristics:
+table based structure, fixed scheme, uses sql language, strong ACID properties, strong ACID compliance,
+table       name  
+1	        raj
+2	        rohan
+3	        ravi
+
+no sql
+flexible schema, JSON like storage, Horizontally scalable, designed for large app.
+ feature	SQL			    NoSQL
+schema		fixed			no fixed
+scale		vertical		horizontal
+Data type	structure		semi
+query		sql			    DB specific
+
+// mongodb vs relational database
+relational DB 		        mongoDB
+table				        collections
+row				            document
+column				        fields
+joins are required		    embedded document possible
+schema is fixed			    schema is flexible
+
+// core mongodb concept
+container for collection. eg school db.
+collection - a group of related documents. e.g. - student , teachers, courses
+Document- single records stored as BSON , binary json
+ACID properties - 
+Atomicity - All operation is succeed or none
+Consistency - Data base remains valid after transaction
+Isolation - Transaction do not interfere
+Durability - Committed data is permanent
+
+single document atomicity - 
+show dbs
+show collections
+db.user.findOne()
+db.user.insertOne({})
+db.user.insertMany([{}])
+db.user.updateOne({},{$set:{}})
+db.user.updateMany({},{$inc:{}}) //increases by
+db.user.find({}).sort({age:-1}).limit()
+db.user.find({courses:{$in:['java','mern"]}})
+db.user.find({$or:[{course:"java"},{age:{$gt:23}}]})
+db.user.find({marks:{$gt:}}) //greater then
+db.user.find().limit(2)
+db.user.skip(3).limit(3)
+db.User.deleteMany({marks:{$lt:60}}) // less then
+db.dropDatabase()
+
