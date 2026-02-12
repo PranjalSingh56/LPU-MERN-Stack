@@ -1,0 +1,107 @@
+rate limiter = restricting how many request a user can send in a fixed time.
+const ratelimit = require("express-rate-limiter");
+const limiter = rateLimit({
+    windowMS:15*60*1000,
+    max:2, // max 100 requests per IP
+    message:"Too many requests, please try again later.",
+});
+
+module.exports = limiter;
+
+rate limiters stores in memory 
+IP - request count - time interval
+flow request arrise
+counter increase
+if counter is > max  = request block
+after time window ends counter requests
+why we use rate limiting
+it procts api from brute force attacks, spam by restricting no, of request  a client can make within a define time limit, 
+tepically returning http when limit reached
+
+where should rate limiting be applied
+it should be applied grobly  for api protection and most strictly on senitive endpoints like authenciation  and otp services
+
+//helmet is a express middleware that secures your app by setting http response header
+it does not block request like rate limiting instead it tells a browser to behave securely
+security rules send from server => enforced by browser
+
+helmet protaction - helmet automatically middlescore  
+x-options , frames - blocks iframe embedding
+x-content-type-option => nosniff
+
+
+strick transport security -> http forces only
+content security policy => block xss milicious scripts
+
+remove x-power-by 
+
+helmet is actully a small middleware each setting a header
+()=>{
+    
+}
+frameguard()=>{}
+    hstc()=>{}
+    nosniff()=>{}
+    xssfilter()=>{}
+    hidePoweredBy()
+
+use https with hsts helmet 
+forces browser => always use https
+imp = important in production deployment
+
+helmet is express middleware  that inhance application by vairous security to proctact against vulablities like click jaking
+mime sniffing , xssw
+
+Does helmet replace rate limiting and validiation  - NO, helmet secure browser  and secure application logic and trafic control all are required header
+most powerfull helmet feature
+content security policy because it can prevent execuation of unauthorized scripts and  significantly reduce  xss risk
+
+web hooks - A web hook is a automatically http post senf from one system to another when an event happens
+normal way (without webhook)
+1.client->"Any Update"
+2. Server => "No"
+client => "Any Update
+server = no
+
+waste of cpu , newtork , time
+
+with webhook way
+event happens => server immeditally send post  => other system recieves update this is called push based communications
+
+what is webhook communication real world
+
+payment status Must ne chacked repetedlly
+github commit must be pulled
+notification become slow
+
+with webhook 
+stand update , less server load, real time automation, instant update
+
+payment(striped/razorPay)
+payment success => payment gateway => sends webhook => server updates order
+
+webhook flow diagram
+
+user action
+|
+event occurs in a system
+|
+system sends  http posts|
+|
+system B  endpoints  recieves data
+|
+sysyem B perform action
+
+what is webhook
+event driven http callback  one system send automatically send a post request to  another one system when specific event occurs.
+
+cronjob 
+* -  min 0-59
+* - hours 0-23
+*  - Day od month
+* - month 1-12 
+* - Day of week 0-7
+
+
+ 
+

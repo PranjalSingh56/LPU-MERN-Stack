@@ -11,6 +11,7 @@ const artifactSchema = new mongoose.Schema(
             type: String,
             required: true
         },
+        
         createdBy: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "User",
@@ -22,4 +23,9 @@ const artifactSchema = new mongoose.Schema(
     }
 );
 
-module.exports = mongoose.model("Artifact", artifactSchema);
+module.exports = mongoose.model("Artifacts", artifactSchema)
+
+
+
+
+
