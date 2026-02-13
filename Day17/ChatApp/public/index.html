@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Login/Setup Screen -->
+    <div id="login-screen">
+        <div class="login-card">
+            <h2>Join Chat</h2>
+            <div class="form-group">
+                <label for="sender-id">Your ID</label>
+                <input type="text" id="sender-id" placeholder="e.g., Alice" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="receiver-id">Chat with</label>
+                <input type="text" id="receiver-id" placeholder="e.g., Bob" autocomplete="off">
+            </div>
+            <button id="connect-btn">Start Chatting</button>
+        </div>
+    </div>
+
+    <!-- Main Chat Interface -->
+    <div id="chat-container" class="chat-container">
+        <header>
+            <h1>Chat</h1>
+            <div class="user-info">
+                <span id="current-user"></span>
+                <span style="margin: 0 5px; color: #ccc;">•</span>
+                Talking to <strong id="current-receiver"></strong>
+            </div>
+        </header>
+
+        <div id="chat-messages">
+            <!-- Messages will appear here -->
+            <div style="text-align: center; color: #9ca3af; margin-top: 20px; font-size: 0.9rem;">
+                Start the conversation...
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off">
+            <button id="send-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
