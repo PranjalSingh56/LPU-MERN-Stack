@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Reusable Card</title>
+    <title>Practice map</title>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -13,25 +13,34 @@
     <script type="text/babel">
         function Card(props) {
             return (
-                <div style={{ border: "1px solid gray", padding: "10px", margin: "10px" }}>
+                <div style={{ border: "1px solid white", borderRadius: "25px", padding: "10px", 
+                margin: "10px", backgroundColor: "black", color: "white" }}>
                     <h2>{props.title}</h2>
                     <p>{props.desc}</p>
+                    <p>{props.price}</p>
                 </div>
             );
         }
 
         function App() {
+            const Data = [{id:1,title:"React", desc:"Library for UI" ,price:"999"},
+            {id:2,title:"Node", desc:"Backend Runtime", price:"799"},
+            {id:3,title:"MongoDB", desc:"Database" ,price:"699"}]
             return (
                 <div>
-                    <Card title="React" desc="Library for UI" />
-                    <Card title="Node" desc="Backend Runtime" />
-                    <Card title="MongoDB" desc="Database" />
+                    {
+                        Data.map((item)=>(
+                            <Card key = {item.id} title = {item.title} desc = {item.desc} />
+                        ))
+                    }  
+                  
                 </div>
             );
         }
         const root = ReactDOM.createRoot(document.getElementById("root"));
         root.render(<App />);
     </script>
+    
 </body>
 
 </html>

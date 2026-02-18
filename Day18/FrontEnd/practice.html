@@ -13,9 +13,11 @@
     <script type="text/babel">
         function Card(props) {
             return (
-                <div style={{ border: "1px solid gray", padding: "10px", margin: "10px" }}>
+                <div style={{ border: "1px solid white", borderRadius: "25px", padding: "10px", 
+                margin: "10px", backgroundColor: "black", color: "white" }}>
                     <h2>{props.title}</h2>
                     <p>{props.desc}</p>
+                    <p>{props.price}</p>
                 </div>
             );
         }
@@ -23,15 +25,16 @@
         function App() {
             return (
                 <div>
-                    <Card title="React" desc="Library for UI" />
-                    <Card title="Node" desc="Backend Runtime" />
-                    <Card title="MongoDB" desc="Database" />
+                    <Card title="React" desc="Library for UI" price="999" />
+                    <Card title="Node" desc="Backend Runtime" price="799" />
+                    <Card title="MongoDB" desc="Database" price="699" />
                 </div>
             );
         }
         const root = ReactDOM.createRoot(document.getElementById("root"));
         root.render(<App />);
     </script>
+    
 </body>
 
 </html>

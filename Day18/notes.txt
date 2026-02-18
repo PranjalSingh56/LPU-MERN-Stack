@@ -468,3 +468,103 @@ Bundle:
 
 👉 CDN = External libraries ko directly internet se load karna. (good for learning/demo)
 👉 Parcel = Tumhari app ko build, bundle aur optimize karne wala tool.(good for real app and production)
+
+in react component is jsut a normal function that return JXS elements.
+ it return UI components = function that returns JSX elements.
+
+ css minified
+
+ Css behavior in react
+ globle css - applied to entire app
+ component css -
+ inline style -inline styling with js object, uses CamelCasing
+ css module
+ Scope css , class name become automaticlly prevents style conflict.
+
+ // componentDidMount, re-rendering, componentDidUnMount, componentDidUpdate
+
+====================================
+REACT LIFECYCLE — SHORT NOTES
+====================================
+
+1) componentDidMount()
+------------------------------
+Runs after component mounts (first render).
+Used for:
+- API calls
+- Timers
+- Event listeners
+
+Memory Line:
+First time screen pe aane ke baad.
+
+
+2) Re-rendering
+------------------------------
+Component runs again when:
+- State changes
+- Props change
+- Parent re-renders
+
+React updates only changed DOM parts.
+
+
+3) componentDidUpdate()
+------------------------------
+Runs after component updates (re-render).
+Used for:
+- Side effects after update
+- Comparing old vs new data
+
+
+4) componentWillUnmount()
+------------------------------
+Runs before component is removed.
+Used for:
+- Cleanup
+- Stop timers
+- Remove listeners
+
+
+====================================
+Flow:
+Mount → Update → Unmount
+====================================
+
+
+
+====================================
+ONE-WAY DATA BINDING — TECH DEFINITION
+====================================
+One-way data binding is a data flow model in which data moves
+in a single direction, typically from the component state or
+parent component to the UI (view). Changes in data update the UI,
+but UI changes do not directly modify the source data.
+
+Key Idea:
+State/Props → View (Unidirectional Flow)
+
+Used In:
+React (default behavior)
+
+
+====================================
+TWO-WAY DATA BINDING — TECH DEFINITION
+====================================
+Two-way data binding is a data synchronization model where
+changes in the data automatically update the UI, and user
+interactions in the UI automatically update the underlying data.
+
+Key Idea:
+Data ↔ View (Bidirectional Flow)
+
+Used In:
+Angular, Vue (with specific directives)
+
+
+====================================
+CORE DIFFERENCE
+====================================
+One-Way  : Data flows in one direction only.
+Two-Way  : Data and UI stay automatically synchronized both ways.
+====================================
