@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import Navbar from "./navbar";
-import Sidebar from "./sidebar";
+import Sidebar from "./Sidebar";
 import MobileTabs from "./MobileTab";
 
 export default function Layout() {
