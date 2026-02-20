@@ -1,0 +1,9 @@
+Feature             Props Drilling                      ContextApi
+Data Passing        Through Each Component              Direct anywhare
+code Cleaness       poor in deep tree                  Clean tree
+Scalablity          diffuclity                         Easy   
+mantainence         hard to maintain                    Easy to mantainence
+
+useContext - when we use when data is  globle e.g. login->user, theme toggle, language, App lable setting, Authentication state
+
+process - globle object that reflects over the root folder
